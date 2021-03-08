@@ -1,0 +1,167 @@
+ sbit LCD_RS at RB2_bit;
+  sbit LCD_EN at RB3_bit;
+  sbit LCD_D7 at RB7_bit;
+  sbit LCD_D6 at RB6_bit;
+  sbit LCD_D5 at RB5_bit;
+  sbit LCD_D4 at RB4_bit;
+
+  sbit LCD_RS_Direction at TRISB2_bit;
+  sbit LCD_EN_Direction at TRISB3_bit;
+  sbit LCD_D7_Direction at TRISB7_bit;
+  sbit LCD_D6_Direction at TRISB6_bit;
+  sbit LCD_D5_Direction at TRISB5_bit;
+  sbit LCD_D4_Direction at TRISB4_bit;
+
+          int celsius = 0;
+          int Temp = 40;
+          int adc_value = 0x02;
+          void testLDR();
+          void testADC();
+          int ldrStatus;
+
+          void testADC()
+          {
+           unsigned char mil, cen, dez, uni;
+
+           adc_value = adc_read(0);
+
+           mil = adc_value/1000;
+           cen = (adc_value%1000)/100;
+           dez = (adc_value%100)/10;
+           uni = adc_value%10;
+
+           lcd_chr(1,14,mil+48);
+           lcd_chr_cp(cen+48);
+           lcd_chr_cp(dez+48);
+           lcd_chr_cp(uni+48);
+          }
+
+          void testLDR()
+          {
+           unsigned char mil1, cen1, dez1, uni1;
+
+           adc_value = adc_read(1);
+
+           mil1 = adc_value/1000;
+           cen1 = (adc_value%1000)/100;
+           dez1 = (adc_value%100)/10;
+           uni1 = adc_value%10;
+
+           lcd_chr(1,14,mil1+48);
+           lcd_chr_cp(cen1+48);
+           lcd_chr_cp(dez1+48);
+           lcd_chr_cp(uni1+48);
+          }
+
+  void main() {
+
+       TRISA = 0x00;
+       PORTA = 0xff;
+       TRISB = 0x00;
+       PORTB = 0xff;
+       ANSELE = 0xff;
+       PORTE = 0x00;
+       ADCON0 = 0x00;
+
+       while(1)
+       Lcd_Init();
+               Lcd_Cmd(_LCD_CLEAR);
+               Lcd_Cmd(_LCD_CURSOR_OFF);
+               Lcd_Chr(1, 1, "T");
+               lcd_chr_cp("e");
+               lcd_chr_cp("m");
+               lcd_chr_cp("p");
+               lcd_chr_cp("e");
+               lcd_chr_cp("r");
+               lcd_chr_cp("a");
+               lcd_chr_cp("t");
+               lcd_chr_cp("u");
+               lcd_chr_cp("r");
+               lcd_chr_cp("a");
+               lcd_chr_cp(":");
+               Lcd_chr(1, 16, " C");
+               Lcd_chr(2, 1, "L");
+               lcd_chr_cp("u");
+               lcd_chr_cp("z");
+               lcd_chr_cp(" ");
+               lcd_chr_cp("A");
+               lcd_chr_cp("m");
+               lcd_chr_cp("b");
+               lcd_chr_cp("i");
+               lcd_chr_cp("e");
+               lcd_chr_cp("n");
+               lcd_chr_cp("t");
+               lcd_chr_cp("e");
+               lcd_chr_cp(":");
+               Lcd_chr(3, 1, "R");
+               lcd_chr_cp("e");
+               lcd_chr_cp("s");
+               lcd_chr_cp("f");
+               lcd_chr_cp("r");
+               lcd_chr_cp("i");
+               lcd_chr_cp("a");
+               lcd_chr_cp("m");
+               lcd_chr_cp("e");
+               lcd_chr_cp("n");
+               lcd_chr_cp("t");
+               lcd_chr_cp("o");
+               lcd_chr_cp(":");
+               Lcd_chr(4, 1, "A");
+               lcd_chr_cp("l");
+               lcd_chr_cp("a");
+               lcd_chr_cp("r");
+               lcd_chr_cp("m");
+               lcd_chr_cp("e");
+               lcd_chr_cp(":");
+               delay_ms(2000);
+
+                  if (ldrStatus >= 54){
+                     RA5_bit = 0;
+                          RA6_bit = 1;
+                          RA7_bit = 0;
+                          Lcd_chr(2, 14, "S");
+                          lcd_chr_cp("I");
+                          lcd_chr_cp("M");
+                          delay_ms(1000);
+                  }
+                   else{
+                       RA5_bit = 1;
+                       RA6_bit = 1;
+                       RA7_bit = 1;
+                       Lcd_chr(2, 14, "N");
+                       lcd_chr_cp("A");
+                       lcd_chr_cp("O");
+                       delay_ms(1000);
+                       }
+                  if (celsius >= Temp){
+                          RA4_bit = 1;
+                          RA3_bit = 0;
+                          RA2_bit = 0;
+                          Lcd_chr(3, 14, "O");
+                          lcd_chr_cp("N");//resfriamento
+                          delay_ms(500);
+                          Lcd_chr(4, 8, "O");
+                          lcd_chr_cp("N");//alarme'
+                          delay_ms(500);
+                          RA1_bit = 1; //resfriamento'
+                          RA0_bit = 1; //alarme'
+                          delay_ms(2500);
+                          RA0_bit = 0;
+                          delay_ms(2500);
+                          }
+                   else{
+                       RA4_bit = 0;
+                       RA3_bit = 0;
+                       RA2_bit = 1;
+                       Lcd_chr(3, 14, "O");
+                       lcd_chr_cp("F");
+                       lcd_chr_cp("F");//resfriamento'
+                       delay_ms(2500);
+                       Lcd_chr(4, 8, "O");
+                       lcd_chr_cp("F");
+                       lcd_chr_cp("F");//alarme'
+                       delay_ms(2500);
+                       RA1_bit = 0;
+                       RA0_bit = 0;
+                       }
+   }
