@@ -1,5 +1,5 @@
-Criado por Leônidas Gomes Borges
-Plataforma Arduino - Linguagem C
+/*Criado por Leônidas Gomes Borges
+Plataforma Arduino - Linguagem C*/
 
 //inclui bibliotecas
 #include <Servo.h>
