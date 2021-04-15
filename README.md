@@ -6,3 +6,7 @@
 ## Circuitos Eletrônicos
 
 ![CE](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/CE.png)
+
+## Led + Potenciômetros
+
+![LED](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/LED%2BPot.PNG)
