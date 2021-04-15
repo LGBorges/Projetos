@@ -5,7 +5,7 @@
 
 ## Circuitos Eletrônicos
 
-![CE](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/CE.png)
+![CE](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/Circuito%20Tinkercad.png)
 
 ## Led + Potenciômetros
 
