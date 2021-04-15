@@ -1,0 +1,95 @@
+const int led_R = 9;
+const int led_G = 10;
+const int led_B = 11;
+
+void setup()
+{
+  pinMode(led_R, OUTPUT);
+  pinMode(led_G, OUTPUT);
+  pinMode(led_B, OUTPUT);
+}
+
+void loop()
+{
+  //LED AZUL
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 255);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  //LED VERMELHO
+  analogWrite(led_R, 255);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  //LED VERDE
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 255);
+  analogWrite(led_B, 0);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  //LED VERDE CLARO
+  analogWrite(led_R, 200);
+  analogWrite(led_G, 255);
+  analogWrite(led_B, 150);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  //LED ROXO
+  analogWrite(led_R, 100);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 255);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  //LED LARANJA
+  analogWrite(led_R, 255);
+  analogWrite(led_G, 110);
+  analogWrite(led_B, 20);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  //LED LARANJA CLARO
+  analogWrite(led_R, 255);
+  analogWrite(led_G, 220);
+  analogWrite(led_B, 120);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  //LED AMARELO
+  analogWrite(led_R, 255);
+  analogWrite(led_G, 255);
+  analogWrite(led_B, 20);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+  //LED BRANCO
+  analogWrite(led_R, 255);
+  analogWrite(led_G, 255);
+  analogWrite(led_B, 255);
+  delay(2000);
+  analogWrite(led_R, 0);
+  analogWrite(led_G, 0);
+  analogWrite(led_B, 0);
+  delay(2000);
+}
