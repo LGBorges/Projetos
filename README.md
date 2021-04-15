@@ -5,4 +5,4 @@
 
 ## Circuitos Eletrônicos
 
-![CE](https://github.com/LeonidasEngineer/Projetos/blob/main/image.png)
+![CE](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/Circuito%20Tinkercad.png)
