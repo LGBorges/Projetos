@@ -152,5 +152,21 @@ void parado(){
   analogWrite(velm3, 0);
   digitalWrite(m3a, 0);
   digitalWrite(m3b, 0);
+  
   delay(3000);
+  
+  //APAGA LEDS
+  analogWrite(ledR1, 0);
+  analogWrite(ledG1, 0);
+  analogWrite(ledB1, 0);
+  
+  analogWrite(ledR2, 0);
+  analogWrite(ledG2, 0);
+  analogWrite(ledB2, 0);
+  
+  analogWrite(ledR3, 0);
+  analogWrite(ledG3, 0);
+  analogWrite(ledB3, 0);
+  
+  delay(500);
 }
