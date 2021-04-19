@@ -2,6 +2,7 @@
 ## Arduino + Display 7 segmentos + botões + servo motor + led RGB
 
 ![Circuito](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/image.png)
+### Você pode alterar o micro servo para um motor CC/DC 
 
 ## Circuitos Eletrônicos
 
