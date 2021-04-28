@@ -22,4 +22,4 @@
 
 ## Ponte Rolante
 
-![PR](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/PonteRolante.PNG)
+![PR]()
