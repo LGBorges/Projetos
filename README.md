@@ -12,10 +12,6 @@
 
 ![LED](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/LED%2BPot.PNG)
 
-## Três Motores + LED RGB
-
-![LEDRGB](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/3Motores%2BLEDrgb.PNG)
-
 ## Ponte Rolante
 
 ![PR](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/PR.PNG)
