@@ -12,10 +12,6 @@
 
 ![LED](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/LED%2BPot.PNG)
 
-## LED Colorido
-
-![RGB](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/LEDcolorido.PNG)
-
 ## Três Motores + LED RGB
 
 ![LEDRGB](https://github.com/LeonidasEngineer/Projetos/blob/Imagens/3Motores%2BLEDrgb.PNG)
